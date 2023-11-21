@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MinTasksExtensionsBridge</id>
-    <version>0.3.0</version>
+    <version>0.3.1</version>
     <title>MinTasksExtensionsBridge</title>
     <authors>Nobuyuki Iwanaga</authors>
     <owners>Deterous</owners>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Deterous/MinimumAsyncBridge</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Backported System.Threading.Tasks.Extensions as far back as .NET Framework 2.0</description>
-    <releaseNotes>support net20/30/35</releaseNotes>
+    <releaseNotes>explicitly support net40</releaseNotes>
     <copyright>Nobuyuki Iwanaga</copyright>
     <tags>Tasks.Extensions</tags>
     <frameworkAssemblies>
@@ -18,7 +18,7 @@
     </frameworkAssemblies>
     <dependencies>
       <group targetFramework="net35">
-        <dependency id="MinimumAsyncBridge" version="0.12.0" />
+        <dependency id="MinAsyncBridge" version="0.12.1" />
       </group>
       <group targetFramework="net45">
         <dependency id="System.Threading.Tasks.Extensions" version="4.5.1" />

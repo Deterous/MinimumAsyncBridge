@@ -1,4 +1,11 @@
-﻿namespace System.Threading.Tasks
+﻿#if NET40_OR_GREATER
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
+
+[assembly: TypeForwardedTo(typeof(TaskCanceledException))]
+#else
+namespace System.Threading.Tasks
 {
     /// <summary>
     /// Represents an exception used to communicate task cancellation.
@@ -32,3 +39,4 @@
         }
     }
 }
+#endif

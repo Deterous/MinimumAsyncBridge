@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MinThreadingBridge</id>
-    <version>0.11.0</version>
+    <version>0.11.2</version>
     <title>MinThreadingBridge</title>
     <authors>Nobuyuki Iwanaga</authors>
     <owners>Deterous</owners>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Deterous/MinimumAsyncBridge</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Miminum set of the async/await portability library, backported as far back as .NET Framework 2.0</description>
-    <releaseNotes>support net20/30/35</releaseNotes>
+    <releaseNotes>explicitly support net40</releaseNotes>
     <copyright>Nobuyuki Iwanaga</copyright>
     <tags>AsyncBridge, CancellationToken</tags>
     <frameworkAssemblies>
@@ -21,6 +21,7 @@
     <file src="..\MinimumThreading\MinimumThreadingBridge\bin\Debug\net20\MinimumThreadingBridge.*" target="lib\net20\" />
     <file src="..\MinimumThreading\MinimumThreadingBridge\bin\Debug\net30\MinimumThreadingBridge.*" target="lib\net30\" />
     <file src="..\MinimumThreading\MinimumThreadingBridge\bin\Debug\net35\MinimumThreadingBridge.*" target="lib\net35\" />
+    <file src="..\MinimumThreading\MinimumThreadingBridge\bin\Debug\net40\MinimumThreadingBridge.*" target="lib\net40\" />
     <file src="..\MinimumThreading\MinimumThreadingBridge.V45\bin\Debug\net45\MinimumThreadingBridge.*" target="lib\net45\" />
     <file src="..\MinimumThreading\MinimumThreadingBridge.V45\bin\Debug\netstandard1.0\MinimumThreadingBridge.*" target="lib\netstandard1.0\" exclude="**\*.deps.json" />
   </files>

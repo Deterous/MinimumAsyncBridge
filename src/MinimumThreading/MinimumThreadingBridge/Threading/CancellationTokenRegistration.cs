@@ -1,4 +1,10 @@
-﻿// ==++==
+﻿#if NET40_OR_GREATER
+using System;
+using System.Runtime.CompilerServices;
+using System.Threading;
+[assembly: TypeForwardedTo(typeof(CancellationTokenRegistration))]
+#else
+// ==++==
 // 
 //   Copyright (c) Microsoft Corporation.  All rights reserved.
 // 
@@ -158,3 +164,4 @@ namespace System.Threading
         }
     }
 }
+#endif

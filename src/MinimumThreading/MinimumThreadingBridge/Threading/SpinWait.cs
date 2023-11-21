@@ -1,4 +1,5 @@
-﻿// ==++==
+﻿#if !NET40_OR_GREATER
+// ==++==
 //
 //   Copyright (c) Microsoft Corporation.  All rights reserved.
 // 
@@ -350,3 +351,4 @@ namespace System.Threading
     }
 
 }
+#endif

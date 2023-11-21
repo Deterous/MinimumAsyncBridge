@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MinValueTupleBridge</id>
-    <version>0.2.0</version>
+    <version>0.2.1</version>
     <title>MinValueTupleBridge</title>
     <authors>Nobuyuki Iwanaga</authors>
     <owners>Deterous</owners>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Deterous/MinimumAsyncBridge</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Backported of System.ValueTuple as far back as .NET Framework 2.0</description>
-    <releaseNotes>support net20/30/35</releaseNotes>
+    <releaseNotes>explicitly support net40</releaseNotes>
     <copyright>Nobuyuki Iwanaga</copyright>
     <tags>ValueTuple</tags>
     <dependencies>
@@ -32,6 +32,7 @@
     <file src="..\ValueTuple\ValueTupleBridge\bin\Debug\net20\ValueTupleBridge.*" target="lib\net20\" />
     <file src="..\ValueTuple\ValueTupleBridge\bin\Debug\net30\ValueTupleBridge.*" target="lib\net30\" />
     <file src="..\ValueTuple\ValueTupleBridge\bin\Debug\net35\ValueTupleBridge.*" target="lib\net35\" />
+    <file src="..\ValueTuple\ValueTupleBridge\bin\Debug\net40\ValueTupleBridge.*" target="lib\net40\" />
     <file src="..\ValueTuple\ValueTupleBridge.TypeForward\bin\Debug\net45\ValueTupleBridge.*" target="lib\net45\" />
     <file src="..\ValueTuple\ValueTupleBridge.TypeForward\bin\Debug\net471\ValueTupleBridge.*" target="lib\net471\" />
     <file src="..\ValueTuple\ValueTupleBridge.TypeForward\bin\Debug\netstandard1.0\ValueTupleBridge.*" target="lib\netstandard1.0\" exclude="**\*.deps.json" />

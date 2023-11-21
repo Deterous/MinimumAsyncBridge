@@ -1,4 +1,11 @@
-﻿namespace System.Threading
+﻿#if NET40_OR_GREATER
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
+
+[assembly: TypeForwardedTo(typeof(SemaphoreSlim))]
+#else
+namespace System.Threading
 {
     using Tasks;
 
@@ -118,3 +125,4 @@
         }
     }
 }
+#endif

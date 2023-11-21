@@ -1,4 +1,11 @@
-﻿using System.Linq;
+﻿#if NET40_OR_GREATER
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
+
+[assembly: TypeForwardedTo(typeof(Task<>))]
+#else
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace System.Threading.Tasks
@@ -85,3 +92,4 @@ namespace System.Threading.Tasks
         }
     }
 }
+#endif

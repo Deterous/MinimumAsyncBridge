@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MinAsyncBridge</id>
-    <version>0.12.0</version>
+    <version>0.12.1</version>
     <title>MinAsyncBridge</title>
     <authors>Nobuyuki Iwanaga</authors>
     <owners>Deterous</owners>
@@ -10,7 +10,7 @@
     <projectUrl>https://github.com/Deterous/MinimumAsyncBridge</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Miminum set of the async/await portability library, backported as far back as .NET Framework 2.0</description>
-    <releaseNotes>support net20/30/35</releaseNotes>
+    <releaseNotes>explicitly support net40</releaseNotes>
     <copyright>Nobuyuki Iwanaga</copyright>
     <tags>AsyncBridge, async, await</tags>
     <frameworkAssemblies>
@@ -18,7 +18,7 @@
     </frameworkAssemblies>
     <dependencies>
       <group targetFramework="net35">
-        <dependency id="MinimumThreadingBridge" version="0.11.0" />
+        <dependency id="MinThreadingBridge" version="0.11.2" />
       </group>
     </dependencies>
   </metadata>

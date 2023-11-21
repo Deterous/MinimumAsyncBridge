@@ -1,4 +1,10 @@
-﻿#pragma warning disable 0420
+﻿#if NET40_OR_GREATER
+using System;
+using System.Runtime.CompilerServices;
+using System.Threading;
+[assembly: TypeForwardedTo(typeof(CancellationTokenSource))]
+#else
+#pragma warning disable 0420
 // ==++==
 // 
 //   Copyright (c) Microsoft Corporation.  All rights reserved.
@@ -1212,3 +1218,4 @@ namespace System.Threading
         }
     }
 }
+#endif
