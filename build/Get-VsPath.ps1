@@ -10,6 +10,16 @@ else
 
 # Candidates. Search from the top, return the first found
 $Script:items =
+    # VS 2022
+    '\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\MSBuild.exe',
+    '\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\MSBuild.exe',
+    '\Microsoft Visual Studio\2022\Enterprise\MSBuild\Current\Bin\MSBuild.exe',
+    '\Microsoft Visual Studio\2022\BuildTools\MSBuild\Current\Bin\MSBuild.exe',
+    # VS 2019
+    '\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\MSBuild.exe',
+    '\Microsoft Visual Studio\2019\Professional\MSBuild\Current\Bin\MSBuild.exe',
+    '\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe',
+    '\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\MSBuild.exe',
     # VS 2017
     '\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe',
     '\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\MSBuild.exe',

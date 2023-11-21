@@ -1,0 +1,32 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MinAsyncBridge</id>
+    <version>0.12.0</version>
+    <title>MinAsyncBridge</title>
+    <authors>Nobuyuki Iwanaga</authors>
+    <owners>Deterous</owners>
+    <licenseUrl>https://github.com/Deterous/MinimumAsyncBridge/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Deterous/MinimumAsyncBridge</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Miminum set of the async/await portability library, backported as far back as .NET Framework 2.0</description>
+    <releaseNotes>support net20/30/35</releaseNotes>
+    <copyright>Nobuyuki Iwanaga</copyright>
+    <tags>AsyncBridge, async, await</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+    </frameworkAssemblies>
+    <dependencies>
+      <group targetFramework="net35">
+        <dependency id="MinimumThreadingBridge" version="0.11.0" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="..\MinimumAsync\MinimumAsyncBridge\bin\Debug\net20\MinimumAsyncBridge.*" target="lib\net20\" />
+    <file src="..\MinimumAsync\MinimumAsyncBridge\bin\Debug\net30\MinimumAsyncBridge.*" target="lib\net30\" />
+    <file src="..\MinimumAsync\MinimumAsyncBridge\bin\Debug\net35\MinimumAsyncBridge.*" target="lib\net35\" />
+    <file src="..\MinimumAsync\MinimumAsyncBridge.V4\bin\Debug\net45\MinimumAsyncBridge.*" target="lib\net45\" />
+    <file src="..\MinimumAsync\MinimumAsyncBridge.V4\bin\Debug\netstandard1.0\MinimumAsyncBridge.*" target="lib\netstandard1.0\" exclude="**\*.deps.json" />
+  </files>
+</package>

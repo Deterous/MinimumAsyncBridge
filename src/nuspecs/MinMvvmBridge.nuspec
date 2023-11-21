@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MinMvvmBridge</id>
+    <version>1.2.0</version>
+    <title>MinMvvmBridge</title>
+    <authors>Nobuyuki Iwanaga</authors>
+    <owners>Deterous</owners>
+    <licenseUrl>https://github.com/Deterous/MinimumAsyncBridge/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Deterous/MinimumAsyncBridge</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Miminum set of the MVVM portability library, backported as far back as .NET Framework 2.0</description>
+    <releaseNotes>support net20/30/35</releaseNotes>
+    <copyright>Nobuyuki Iwanaga</copyright>
+    <tags>ObservableCollection, INotifyCollectionChanged</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="..\Mvvm\MvvmBridge\bin\Debug\net20\MvvmBridge.*" target="lib\net20\" />
+    <file src="..\Mvvm\MvvmBridge\bin\Debug\net30\MvvmBridge.*" target="lib\net30\" />
+    <file src="..\Mvvm\MvvmBridge\bin\Debug\net35\MvvmBridge.*" target="lib\net35\" />
+    <file src="..\Mvvm\MvvmBridge.TypeForward\bin\Debug\net45\MvvmBridge.*" target="lib\net45\" />
+    <file src="..\Mvvm\MvvmBridge.TypeForward\bin\Debug\netstandard1.0\MvvmBridge.*" target="lib\netstandard1.0\" exclude="**\*.deps.json" />
+  </files>
+</package>

@@ -1,5 +1,5 @@
-.\NuGet.exe pack .\MinimumAsyncBridge.nuspec -NoPackageAnalysis -OutputDirectory .
-.\NuGet.exe pack .\MinimumThreadingBridge.nuspec -NoPackageAnalysis -OutputDirectory .
-.\NuGet.exe pack .\MvvmBridge.nuspec -NoPackageAnalysis -OutputDirectory .
-.\NuGet.exe pack .\ValueTupleBridge.nuspec -NoPackageAnalysis -OutputDirectory .
-.\NuGet.exe pack .\TasksExtensionsBridge.nuspec -NoPackageAnalysis -OutputDirectory .
+.\NuGet.exe pack .\MinAsyncBridge.nuspec -NoPackageAnalysis -OutputDirectory .
+.\NuGet.exe pack .\MinThreadingBridge.nuspec -NoPackageAnalysis -OutputDirectory .
+.\NuGet.exe pack .\MinMvvmBridge.nuspec -NoPackageAnalysis -OutputDirectory .
+.\NuGet.exe pack .\MinValueTupleBridge.nuspec -NoPackageAnalysis -OutputDirectory .
+.\NuGet.exe pack .\MinTasksExtensionsBridge.nuspec -NoPackageAnalysis -OutputDirectory .

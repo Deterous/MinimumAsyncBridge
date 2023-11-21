@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>IteratorTasks.MinAsyncBridge</id>
+    <version>0.9.0.0</version>
+    <title>IteratorTasks.MinAsyncBridge</title>
+    <authors>Nobuyuki Iwanaga</authors>
+    <owners>Deterous</owners>
+    <licenseUrl>https://github.com/Deterous/MinimumAsyncBridge/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Deterous/MinimumAsyncBridge</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>async/await bridge with IteratorTasks + MinAsyncBridge.</description>
+    <releaseNotes>pre-release.</releaseNotes>
+    <copyright>Nobuyuki Iwanaga</copyright>
+    <tags>AsyncBridge, async, await, IteratorTasks</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+    </frameworkAssemblies>
+      <dependencies>
+          <dependency id="IteratorTasks" version="1.0.0" />
+          <dependency id="MinAsyncBridge" version="0.12.0" />
+      </dependencies>
+  </metadata>
+  <files>
+      <file src="..\bin\IteratorTasks\IteratorTasks.AsyncBridge.*" target="lib\" />
+  </files>
+</package>
