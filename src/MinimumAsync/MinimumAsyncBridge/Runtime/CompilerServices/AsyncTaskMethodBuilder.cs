@@ -59,7 +59,7 @@ namespace System.Runtime.CompilerServices
         /// <returns>The initialized <see cref="AsyncTaskMethodBuilder"/>.</returns>
         public static AsyncTaskMethodBuilder Create()
         {
-            return default(AsyncTaskMethodBuilder);
+            return default;
         }
 
         /// <summary>Initiates the builder's execution with the associated state machine.</summary>

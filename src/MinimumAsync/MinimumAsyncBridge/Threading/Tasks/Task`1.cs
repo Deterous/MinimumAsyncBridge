@@ -1,9 +1,32 @@
 ﻿#if NET40_OR_GREATER
+using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Threading;
 using System.Threading.Tasks;
 
 [assembly: TypeForwardedTo(typeof(Task<>))]
+namespace System.Threading.Tasks
+{
+    /// <summary>
+    /// Represents an asynchronous operation that can return a value.
+    /// </summary>
+    public static partial class TaskExtensionsInternal
+    {
+        public static TaskAwaiter<TResult> GetAwaiter<TResult>(this Task<TResult> task) => new TaskAwaiter<TResult>(task);
+
+        public static ConfiguredTaskAwaitable<TResult> ConfigureAwait<TResult>(this Task<TResult> task, bool continueOnCapturedContext) => new ConfiguredTaskAwaitable<TResult>(task, continueOnCapturedContext);
+
+        internal static TResult GetResult<TResult>(this Task<TResult> task)
+        {
+            if (task.Exception != null)
+                throw task.Exception.InnerExceptions.First();
+
+            if (task.IsCanceled)
+                throw new TaskCanceledException();
+
+            return task.Result;
+        }
+    }
+}
 #else
 using System.Linq;
 using System.Runtime.CompilerServices;

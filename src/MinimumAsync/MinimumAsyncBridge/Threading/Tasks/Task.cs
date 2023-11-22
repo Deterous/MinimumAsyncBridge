@@ -1,9 +1,69 @@
 ﻿#if NET40_OR_GREATER
+using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Threading;
 using System.Threading.Tasks;
 
 [assembly: TypeForwardedTo(typeof(Task))]
+namespace System.Threading.Tasks
+{
+    /// <summary>
+    /// Represents an asynchronous operation.
+    /// </summary>
+    public static partial class TaskExtensionsInternal
+    {
+        internal static void OnCompleted(this Task task, Action continuation)
+        {
+            lock (task)
+            {
+                if (task.IsCompleted)
+                {
+                    continuation();
+                    return;
+                }
+
+                Action<Task> x = null;
+                x = (t) =>
+                {
+                    continuation();
+                };
+
+                task.ContinueWith(x);
+            }
+        }
+
+        internal static void OnCompleted(this Task task, Action<Task> continuation)
+        {
+            lock (task)
+            {
+                if (task.IsCompleted)
+                {
+                    continuation(task);
+                    return;
+                }
+
+                task.ContinueWith(continuation);
+            }
+        }
+
+        internal static void GetResult(this Task task)
+        {
+            if (task.Exception != null)
+                throw task.Exception.InnerExceptions.First();
+
+            if (task.IsCanceled)
+                throw new TaskCanceledException();
+        }
+
+        public static Task<TResult> FromResult<TResult>(TResult value)
+        {
+            var tcs = new TaskCompletionSource<TResult>();
+            tcs.SetResult(value);
+            return tcs.Task;
+        }
+    }
+}
+
+
 #else
 using System.Collections.Generic;
 using System.Linq;

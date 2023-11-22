@@ -127,7 +127,11 @@ namespace System.Threading.Tasks
             // Return the task if we were constructed from one, otherwise manufacture one.  We don't
             // cache the generated task into _task as it would end up changing both equality comparison
             // and the hash code we generate in GetHashCode.
+#if NET40
+            return _task ?? TaskExtensionsInternal.FromResult(_result);
+#else
             return _task ?? Task.FromResult(_result);
+#endif
         }
 
         /// <summary>Gets whether the <see cref="ValueTask{TResult}"/> represents a completed operation.</summary>

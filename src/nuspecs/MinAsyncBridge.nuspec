@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MinAsyncBridge</id>
-    <version>0.12.1</version>
+    <version>0.12.2</version>
     <title>MinAsyncBridge</title>
     <authors>Nobuyuki Iwanaga</authors>
     <owners>Deterous</owners>
@@ -26,6 +26,7 @@
     <file src="..\MinimumAsync\MinimumAsyncBridge\bin\Debug\net20\MinimumAsyncBridge.*" target="lib\net20\" />
     <file src="..\MinimumAsync\MinimumAsyncBridge\bin\Debug\net30\MinimumAsyncBridge.*" target="lib\net30\" />
     <file src="..\MinimumAsync\MinimumAsyncBridge\bin\Debug\net35\MinimumAsyncBridge.*" target="lib\net35\" />
+    <file src="..\MinimumAsync\MinimumAsyncBridge\bin\Debug\net40\MinimumAsyncBridge.*" target="lib\net40\" />
     <file src="..\MinimumAsync\MinimumAsyncBridge.V4\bin\Debug\net45\MinimumAsyncBridge.*" target="lib\net45\" />
     <file src="..\MinimumAsync\MinimumAsyncBridge.V4\bin\Debug\netstandard1.0\MinimumAsyncBridge.*" target="lib\netstandard1.0\" exclude="**\*.deps.json" />
   </files>

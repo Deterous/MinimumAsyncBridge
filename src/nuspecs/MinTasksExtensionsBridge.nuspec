@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MinTasksExtensionsBridge</id>
-    <version>0.3.1</version>
+    <version>0.3.2</version>
     <title>MinTasksExtensionsBridge</title>
     <authors>Nobuyuki Iwanaga</authors>
     <owners>Deterous</owners>
@@ -18,7 +18,7 @@
     </frameworkAssemblies>
     <dependencies>
       <group targetFramework="net35">
-        <dependency id="MinAsyncBridge" version="0.12.1" />
+        <dependency id="MinAsyncBridge" version="0.12.2" />
       </group>
       <group targetFramework="net45">
         <dependency id="System.Threading.Tasks.Extensions" version="4.5.1" />
@@ -38,6 +38,7 @@
     <file src="..\TasksExtensions\TasksExtensionsBridge\bin\Debug\net20\TasksExtensionsBridge.*" target="lib\net20\" />
     <file src="..\TasksExtensions\TasksExtensionsBridge\bin\Debug\net30\TasksExtensionsBridge.*" target="lib\net30\" />
     <file src="..\TasksExtensions\TasksExtensionsBridge\bin\Debug\net35\TasksExtensionsBridge.*" target="lib\net35\" />
+    <file src="..\TasksExtensions\TasksExtensionsBridge\bin\Debug\net40\TasksExtensionsBridge.*" target="lib\net40\" />
     <file src="..\TasksExtensions\TasksExtensionsBridge.TypeForward\bin\Debug\net45\TasksExtensionsBridge.*" target="lib\net45\" />
     <file src="..\TasksExtensions\TasksExtensionsBridge.TypeForward\bin\Debug\net471\TasksExtensionsBridge.*" target="lib\net471\" />
     <file src="..\TasksExtensions\TasksExtensionsBridge.TypeForward\bin\Debug\netstandard1.0\TasksExtensionsBridge.*" target="lib\netstandard1.0\" exclude="**\*.deps.json" />
