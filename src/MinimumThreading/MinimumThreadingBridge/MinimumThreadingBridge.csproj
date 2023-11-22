@@ -9,7 +9,7 @@
   </PropertyGroup>
 	
   <ItemGroup Condition="$(TargetFramework.StartsWith(`net2`)) OR $(TargetFramework.StartsWith(`net30`))">
-    <PackageReference Include="LinqBridge" Version="1.3.0" />
+    <PackageReference Include="Net30.LinqBridge" Version="1.3.0" />
   </ItemGroup>
 
   <ItemGroup>
