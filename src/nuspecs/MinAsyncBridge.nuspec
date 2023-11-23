@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MinAsyncBridge</id>
-    <version>0.12.3</version>
+    <version>0.12.4</version>
     <title>MinAsyncBridge</title>
     <authors>Nobuyuki Iwanaga</authors>
     <owners>Deterous</owners>
@@ -18,13 +18,16 @@
     </frameworkAssemblies>
     <dependencies>
       <group targetFramework="net20">
-        <dependency id="MinThreadingBridge" version="0.11.3" />
+        <dependency id="MinThreadingBridge" version="0.11.4" />
       </group>
       <group targetFramework="net30">
-        <dependency id="MinThreadingBridge" version="0.11.3" />
+        <dependency id="MinThreadingBridge" version="0.11.4" />
       </group>
       <group targetFramework="net35">
-        <dependency id="MinThreadingBridge" version="0.11.3" />
+        <dependency id="MinThreadingBridge" version="0.11.4" />
+      </group>
+      <group targetFramework="net40">
+        <dependency id="MinThreadingBridge" version="0.11.4" />
       </group>
     </dependencies>
   </metadata>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>MinTasksExtensionsBridge</id>
-    <version>0.3.3</version>
+    <version>0.3.4</version>
     <title>MinTasksExtensionsBridge</title>
     <authors>Nobuyuki Iwanaga</authors>
     <owners>Deterous</owners>
@@ -18,13 +18,16 @@
     </frameworkAssemblies>
     <dependencies>
       <group targetFramework="net20">
-        <dependency id="MinAsyncBridge" version="0.12.3" />
+        <dependency id="MinAsyncBridge" version="0.12.4" />
       </group>
       <group targetFramework="net30">
-        <dependency id="MinAsyncBridge" version="0.12.3" />
+        <dependency id="MinAsyncBridge" version="0.12.4" />
       </group>
       <group targetFramework="net35">
-        <dependency id="MinAsyncBridge" version="0.12.3" />
+        <dependency id="MinAsyncBridge" version="0.12.4" />
+      </group>
+      <group targetFramework="net40">
+        <dependency id="MinAsyncBridge" version="0.12.4" />
       </group>
       <group targetFramework="net45">
         <dependency id="System.Threading.Tasks.Extensions" version="4.5.1" />
