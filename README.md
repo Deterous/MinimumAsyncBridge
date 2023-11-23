@@ -1,62 +1,30 @@
-# MinimumAsyncBridge
+# MinAsyncBridge
 
-Miminum set of the async/await portability libararies.
+Miminum set of the async/await portability libraries, as well as ValueTuple and MVVM.
+Forked from https://github.com/OrangeCube/MinimumAsyncBridge and attempts to provide .NET Framework 2.0, 3.0, and 4.0 support.
 
 ## Usage
 
 NuGet packages:
 
-- [MinimumThreadingBridge](https://www.nuget.org/packages/MinimumThreadingBridge/)
+- [MinThreadingBridge](https://www.nuget.org/packages/MinThreadingBridge/)
   - contains: `CancellationToken`, `IProgress<T>`, ...
-- [MinimumAsyncBridge](https://www.nuget.org/packages/MinimumAsyncBridge/)
+- [MinAsyncBridge](https://www.nuget.org/packages/MinAsyncBridge/)
   - contains: `Task`, `Task<TResult>`, `TaskCompletionSource<TResult>`, `TaskAwaiter`, ...
-- [MvvmBridge](https://www.nuget.org/packages/MvvmBridge/)
+- [MinMvvmBridge](https://www.nuget.org/packages/MinMvvmBridge/)
   - contains: `INotifyCollectionChanged`, `ObservableCollection<T>`, `CallerMemberNameAttribute`, ...
+- [MinValueTupleBridge](https://www.nuget.org/packages/MinValueTupleBridge/)
+  - contains: `ValueTuple`, `ValueTuple<>`, ...
+- [MinTasksExtensionsBridge](https://www.nuget.org/packages/MinTasksExtensionsBridge/)
+  - contains: `ValueTask`, `ValueTaskAwaiter`, ...
 
 These packages includes:
 
-- Back-porting implementation for .NET 3.5
+- Back-porting implementation for .NET Framework 2.0, 3.0, 3.5, 4.0
 - Type forwarding for .NET 4.5 or later
-
-So, these libraries are supported in mixed versions with both 3.5 and 4.5 (but not with .NET 4).
-You can create a library with .NET 3.5 with the back-ports, and then, consume it from an app with .NET 4.5.
-
-## Motivation
-
-I'd like to use async/await functionality in [Unity game engine](http://unity3d.com/).
-The runtime version of Mono used by Unity is 2.8 which is nearly equivalent to .NET 3.5 and does not have the `Task` class.
-
-In this background, I have implemented back-porting libararies of the classes related to async/await  to .NET 3.5, especially Unity.
-The back-porting libararies includes the `Task`, `TaskCompletionSource`, `TaskAwaiter`, and so on.
-
-## Implementation
-
-The implementation is based on code in [https://github.com/Microsoft/referencesource](https://github.com/Microsoft/referencesource), 
-I use [tunnelvisionlabs/dotnet-threading#90](https://github.com/tunnelvisionlabs/dotnet-threading/pull/90) as a reference, 
-and the MinimumAsyncBridge has the same problem as the dotnet-threading.
-
-The `Task` class in .NET has multiple roles:
-
-1. threading: `Task.Run`
-1. timer: `Task.Delay`
-1. future/promise: `TaskCompletionSource`
-
-ThE back-porting libararies implement only 2. and 3. (Minimum requirement of async/await is 3.). 
-For 1., only a few overloads of `Task.Run`, `WhenAny` and `WhenAll` are implemented (but, it's simplified implementation).
-If you would need the full threading capability, you could use another threading library and interop by using `TaskCompletionSource`.
 
 ## Known problem
 
 The debbugability of the `Task` in the MinimumAsyncBridge is poorer than original `Task`.
 Stack trace information is lost because the back-port does not have `System.Runtime.ExceptionServices.ExceptionDispatchInfo`,
 which is impossible without runtime support.
-
-## Notice: Use in Unity
-
-The back-porting libararies contains classes required for async/await. 
-However, the C# 5.0 (or later) compiler is also required. Thus:
-
-- you can use async/await with .NET 3.5 and these libararies with the C# 5.0 compiler.
-- if you create a DLL with the C# 5.0 compiler and copy it to a Unity project, you can use async/await in the DLL.
-- but, you can still not use async/await with the compiler bundled with Unity.
-

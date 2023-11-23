@@ -1,4 +1,5 @@
 ﻿# If Program Files (x86) is found, use Program Files (x86). If Program Files (x86) is not found it, use Program Files
+# Yes, this causes problems with VS 2022 not being found because it is 64bit
 if (Test-Path ${env:ProgramFiles(x86)})
 {
     $Script:ProgramFiles = ${env:ProgramFiles(x86)}
