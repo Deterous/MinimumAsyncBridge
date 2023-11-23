@@ -18,13 +18,13 @@ NuGet packages:
 - [MinTasksExtensionsBridge](https://www.nuget.org/packages/MinTasksExtensionsBridge/)
   - contains: `ValueTask`, `ValueTaskAwaiter`, ...
 
-These packages includes:
+These packages provide:
 
 - Back-porting implementation for .NET Framework 2.0, 3.0, 3.5, 4.0
 - Type forwarding for .NET 4.5 or later
 
 ## Known problem
 
-The debbugability of the `Task` in the MinimumAsyncBridge is poorer than original `Task`.
+The debuggability of the `Task` in the MinAsyncBridge is poorer than original `Task`.
 Stack trace information is lost because the back-port does not have `System.Runtime.ExceptionServices.ExceptionDispatchInfo`,
 which is impossible without runtime support.
